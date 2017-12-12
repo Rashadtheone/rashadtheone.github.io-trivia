@@ -82,6 +82,10 @@ body {
     width:25%;
     height:450px;
 }
+.player-choice {
+    width:22%;
+    border-bottom:1px solid black;
+}
 .footer-container {
     width:100%;
     text-align: right;
