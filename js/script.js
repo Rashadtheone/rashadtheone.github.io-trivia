@@ -11,6 +11,54 @@ var aqNaruto = [
     q: 'who is sasuke?',
     a: ['./imgs/q15.png', './imgs/q16.png', './imgs/q17.png', './imgs/q18.png'],
     answer: './imgs/q18.png'
+  },
+  {
+    questionN: 3,
+    q: 'Which move is Chidori',
+    a: ['./imgs/q19.gif', './imgs/q20.gif', './imgs/q21.gif', './imgs/q22.gif'],
+    answer: './imgs/q20.gif'
+  },
+  {
+    questionN: 4,
+    q: 'Who uses this the Rasengan?',
+    a: ['./imgs/q23.png', './imgs/q24.png', './imgs/q25.png', './imgs/q26.png'],
+    answer: './imgs/q23.png'
+  },
+  {
+    questionN: 5,
+    q: 'Which one is the most useless?',
+    a: ['./imgs/q27.gif', './imgs/q28.gif', './imgs/q29.gif', './imgs/q30.gif'],
+    answer: './imgs/q27.gif'
+  },
+  {
+    questionN: 6,
+    q: 'Which character is the first Shodiame Hokage?',
+    a: ['./imgs/q31.png', './imgs/q32.png', './imgs/q33.png', './imgs/q34.png'],
+    answer: './imgs/q31.png'
+  },
+  {
+    questionN: 7,
+    q: 'which character is the Seventh Hokage?',
+    a: ['./imgs/q36.png', './imgs/q35.png', './imgs/q37.png', './imgs/q38.png'],
+    answer: './imgs/q35.png'
+  },
+  {
+    questionN: 8,
+    q: 'Which person is a villan?',
+    a: ['./imgs/q39.png', './imgs/q40.png', './imgs/q41.png', './imgs/q42.png'],
+    answer: './imgs/q41.png'
+  },
+  {
+    questionN: 9,
+    q: 'Who created the flying Thunder God Technique?',
+    a: ['./imgs/q43.png', './imgs/q44.png', './imgs/q45.png', './imgs/q46.png'],
+    answer: './imgs/q46.png'
+  },
+  {
+    questionN: 10,
+    q: 'Who was good then evil and then turned good after dying?',
+    a: ['./imgs/q47.gif', './imgs/q48.gif', './imgs/q49.gif', './imgs/q50.gif'],
+    answer: './imgs/q49.gif'
   }
     // set the variable index at 0, for the question
 
@@ -81,8 +129,10 @@ $(document).ready(function () {
         //empties out the boards and fetchs new data
       $('#question-board').empty()
       $('#answer-board').empty()
+      //invokes nextQuestion
       startGame(index++)
     }
+    //next question skip question
     $('#next').on('click', function () {
       console.log('bacon')
       nextQuestion()

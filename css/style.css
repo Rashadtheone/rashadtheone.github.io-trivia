@@ -1,5 +1,6 @@
 body {
-    background:snow;
+    background:#949C85;
+    color: 	#1F2710;
 }
 .main-container { 
     width: 98%;
@@ -7,6 +8,7 @@ body {
     flex-flow:column;
     align-items: center;   
     align-content: center;
+    
 }
 .header-container {
     width: 90%;
@@ -14,6 +16,7 @@ body {
     flex-flow: column;
     align-items: center;    
     align-content: center;
+    border-bottom: double #1F2710 3px;
     
 }
 .header-container>h1 { 
@@ -24,6 +27,11 @@ body {
     letter-spacing: 5px;
     justify-content: center; 
 }
+.header-container>h1::first-letter { 
+    color:red;
+    font-size: 30px;
+}
+
 .header-container>h2 { 
     margin:0;
     padding:5px;
@@ -71,11 +79,44 @@ body {
     align-items: flex-start;
 }
 .active-choices {
-    width:100%;
+    width:150px;
+    height:280px;
+    font-size: 25px;
+    margin:3px;
+    
+}
+.active-choices:link {
+    width:150px;
+    height:280px;
+    font-size: 25px;
+    margin:3px;
+    filter: saturate(5)
+    
+    
+}
+.active-choices:visited {
+    width:150px;
     height:280px;
     font-size: 25px;
     margin:3px;
 }
+.active-choices:hover {
+    width:180px;
+    height:300px;
+    font-size: 25px;
+    margin:3px;
+    filter: saturate(5)
+
+}
+
+.active-choices:active {
+    width:180px;
+    height:300px;
+    font-size: 25px;
+    margin:3px;
+    
+}
+.active-choices
 /* .active-choices>img {
     width:100%;
     height:280;
@@ -92,10 +133,70 @@ body {
     border-bottom:1px solid black;
 }
 .footer-container {
+    display:flex;
     width:100%;
-    text-align: right;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: baseline;
 
 } 
 .footer-container>h1 {
     font-size: 20px;
 } 
+
+#start {
+    margin:5px;
+    width:120px;
+    height:35px;
+    font-size: 20px;
+    background: transparent;
+    border: solid #1F2710 1px;
+    text-align: center;
+    color: 	#1F2710;
+    border-radius: 400px;
+
+}
+#players {
+    margin:5px;
+    width:160px;
+    height:30px;
+    font-size: 20px;
+    background: transparent;
+    border: solid #1F2710 1px;
+    text-align: center;
+    color: 	#1F2710;
+    border-radius: 400px;
+}
+#next {
+        margin:5px;
+        width:160px;
+        height:30px;
+        font-size: 20px;
+        background: transparent;
+        border: solid #1F2710 1px;
+        text-align: center;
+        color: 	#1F2710;
+        border-radius: 400px;
+}
+.letter-one {
+    margin: 2px;
+    font-size:40px;
+    animation: 3s infinite alternate blinker;
+}
+.letter-two {
+    margin: 2px;
+    color:red;
+    font-size:25px;
+    animation: 3s infinite alternate blinker;
+}
+.letter-three {
+    margin: 2px;
+    color:gray;
+    font-size:25px;
+    animation: 3s infinite alternate blinker;
+}
+@keyframes blinker {
+    From { color:green} 
+to {color:rgb(32, 40, 139);
+}
+}
