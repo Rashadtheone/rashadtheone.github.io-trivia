@@ -59,6 +59,10 @@ var aqNaruto = [
     q: 'Who was good then evil and then turned good after dying?',
     a: ['./imgs/q47.gif', './imgs/q48.gif', './imgs/q49.gif', './imgs/q50.gif'],
     answer: './imgs/q49.gif'
+  },
+  {
+    questionN: 11,
+    q: 'THE END!'
   }
     // set the variable index at 0, for the question
 
@@ -68,6 +72,12 @@ var index = 0
 // The end of my global scope
 // Enables Jquery on the document
 $(document).ready(function () {
+  $('#players').on('click', function () {
+    $('input[type=text]').each(function () {
+      $(this).val('')
+  })
+
+ })
     // onlcik buut that allows user to start the game
   $('#start').click(function (e) {
       // preventing button default actions
@@ -117,25 +127,35 @@ $(document).ready(function () {
         var $newScore = parseInt(score$)
         // this adds 1 to the current dom element value using the += operand
         $('#numberV').text($newScore += 1)
-        //goes to next question if it's right?
-        nextQuestion()
+        // goes to next question if it's right?
+        checkForEnd()
       } else {
-        alert('your wrong')
+        checkForEnd()
       }
-      //end of onClick function
+      // end of onClick function
     })
-    //createion of next question function
+    function checkForEnd () {
+      if (aqNaruto.questionN === 11) {
+        console.log(aqNaruto.questionN)
+        alert('you have reached the end of the game')
+      } else {
+        nextQuestion()
+      }
+    }
+    // createion of next question function
     function nextQuestion () {
-        //empties out the boards and fetchs new data
+        // empties out the boards and fetchs new data
       $('#question-board').empty()
       $('#answer-board').empty()
-      //invokes nextQuestion
+      // invokes nextQuestion
       startGame(index++)
     }
-    //next question skip question
+    // next question skip question
     $('#next').on('click', function () {
-      console.log('bacon')
       nextQuestion()
+    })
+    $('#rest').on('click', function () {
+      location.reload()
     })
   }
 })
