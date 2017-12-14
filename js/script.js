@@ -75,9 +75,9 @@ $(document).ready(function () {
   $('#players').on('click', function () {
     $('input[type=text]').each(function () {
       $(this).val('')
+    })
   })
 
- })
     // onlcik buut that allows user to start the game
   $('#start').click(function (e) {
       // preventing button default actions
@@ -94,16 +94,23 @@ $(document).ready(function () {
     }// outputs the amount of players in the game based on conditional answers.
     else if (input === '2') {
         // creates two players on the DOM! then appends them to the DOM
-      $player1 = $("<div class='player-choice'> <h1>Player 1</h1> <h2 id = 'p1score'>Score: 0</h2></div>")
-      var $player2 = $("<div class='player-choice'> <h1>Player 2</h1> <h2 id = 'p1score'>Score: 0</h2></div>")
+      $player1 = $("<div class='player-choice'> <h1>Player 1</h1> <h2 id = 'p1score'>Score: <span id = 'numberV'> 0 </span></h2></div>")
+      var $player2 = $("<div class='player-choice'> <h1>Player 2</h1> <h2 id = 'p2score'>Score: <span id = 'numberB'>0</span></h2></div>")
       // invoke to startGame function
-      startGame()
+      startGame2()
       $('#player-stats').append($player1, $player2)
     } else {
         // lets them know the max amount of players.
       alert('too many players, it can only be two.')
     }
   })
+  function nextQuestion () {
+    // empties out the boards and fetchs new data
+    $('#question-board').empty()
+    $('#answer-board').empty()
+  // invokes nextQuestion
+    startGame(index++)
+  }
   // creation of the start game function.
   function startGame () {
     // append the question to question-board in DOM
@@ -143,19 +150,52 @@ $(document).ready(function () {
       }
     }
     // createion of next question function
-    function nextQuestion () {
-        // empties out the boards and fetchs new data
-      $('#question-board').empty()
-      $('#answer-board').empty()
-      // invokes nextQuestion
-      startGame(index++)
-    }
+
     // next question skip question
     $('#next').on('click', function () {
       nextQuestion()
     })
     $('#rest').on('click', function () {
       location.reload()
+    })
+  }
+  function startGame2 () {
+    // append the question to question-board in DOM
+    $('#question-board').append(`<div class = 'active-question'> ${aqNaruto[index].q}</div>`)
+    // For loop was created to loop through the array of images in my object.
+    for (var i = 0; i < aqNaruto[index].a.length; i++) {
+        // post question answers on answer-board
+      $('#answer-board').append(`<div><img class ='active-choices' src = "${aqNaruto[index].a[i]}" /></div>`)
+    }
+    $('.active-choices').on('click', function () {
+      var answer = `${aqNaruto[index].answer}`
+
+      var userInput = $(this).attr('src')
+
+      if (userInput === answer) {
+        var score$ = $('#numberV').text()
+        var $newScore = parseInt(score$)
+        $('#numberV').text($newScore += 1)
+        nextQuestion()
+      } else if (userInput !== answer) {
+        alert('player two turn')
+        $('.active-choices').off()
+        $('.active-choices').on('click', function () {
+          var userInput2 = $(this).attr('src')
+
+          if (userInput2 === answer) {
+            var score2$ = $('#numberB').text()
+
+            var $newScore2 = parseInt(score2$)
+            console.log($('#numberB'))
+
+            $('#numberB').text($newScore2 += 1)
+            nextQuestion()
+          } else {
+            nextQuestion()
+          }
+        })
+      }
     })
   }
 })

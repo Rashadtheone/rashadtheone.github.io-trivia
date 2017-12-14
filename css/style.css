@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
 body {
     background:#949C85;
     color: 	#1F2710;
+    font-family: 'Berkshire Swash', cursive;
 }
 .main-container { 
     width: 98%;
