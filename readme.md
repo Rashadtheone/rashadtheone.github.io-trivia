@@ -1,7 +1,7 @@
 #Ninja Who! a Trivia Game!
 ####Powered By Jquery
 
-This is [an example](http://rashadtheone.github.io/trivia/) inline link.
+This is [Live Game](http://rashadtheone.github.io/trivia/)
 
 #How to Play ! 
 Once the game is loaded, you'll slected the amount of players which will can only be *1* for now
