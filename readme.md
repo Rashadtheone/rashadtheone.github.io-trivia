@@ -19,7 +19,7 @@ You can skip Questions as well.
 
 #Planned Addtions - 
 - [ ]Enter to start the Game
-- [ ]VS Mode 
+- [x]VS Mode 
 - [ ]Win Counter
 - [ ]Directions Button
 - [ ]Randomize questions 
