@@ -1,6 +1,6 @@
-#Ninja Who! a Trivia Game!
-####Powered By Jquery
-
+# Ninja Who! a Trivia Game!
+#### Powered By Jquery
+<!-- AS: You need spaces in between # and the word for markdown! -->
 This is [Live Game](http://rashadtheone.github.io/trivia/)
 
 #How to Play ! 

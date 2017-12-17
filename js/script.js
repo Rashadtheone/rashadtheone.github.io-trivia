@@ -1,4 +1,5 @@
 // main Array of objects
+// AS: I would probably put this in another file!
 var aqNaruto = [
   {
     questionN: 1,
@@ -113,6 +114,9 @@ $(document).ready(function () {
   }
   // creation of the start game function.
   function startGame () {
+    // AS: I would DRY up this code, looks like most of this is repeated in startGame2
+    // you could
+
     // append the question to question-board in DOM
     $('#question-board').append(`<div class = 'active-question'> ${aqNaruto[index].q}</div>`)
     // For loop was created to loop through the array of images in my object.
@@ -135,10 +139,8 @@ $(document).ready(function () {
         // this adds 1 to the current dom element value using the += operand
         $('#numberV').text($newScore += 1)
         // goes to next question if it's right?
-        checkForEnd()
-      } else {
-        checkForEnd()
       }
+      checkForEnd()      
       // end of onClick function
     })
     function checkForEnd () {
@@ -159,6 +161,8 @@ $(document).ready(function () {
       location.reload()
     })
   }
+
+  // I would call this something like startGame2Player
   function startGame2 () {
     // append the question to question-board in DOM
     $('#question-board').append(`<div class = 'active-question'> ${aqNaruto[index].q}</div>`)

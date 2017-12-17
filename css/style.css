@@ -1,125 +1,133 @@
+/* AS: good job here! I would work on making sure the style is consistent
+Great job using keyframes and  */
 @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
 body {
-    background:#949C85;
-    color: 	#1F2710;
+    background: #949C85;
+    color: #1F2710;
     font-family: 'Berkshire Swash', cursive;
 }
-.main-container { 
+
+.main-container {
     width: 98%;
-    display:flex;
-    flex-flow:column;
-    align-items: center;   
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     align-content: center;
-    
 }
+
 .header-container {
     width: 90%;
-    display:flex;
+    display: flex;
     flex-flow: column;
-    align-items: center;    
+    align-items: center;
     align-content: center;
     border-bottom: double #1F2710 3px;
-    
 }
-.header-container>h1 { 
-    margin:0;
-    margin:2px;
-    padding:5px;
+
+.header-container>h1 {
+    margin: 0;
+    margin: 2px;
+    padding: 5px;
     font-size: 27px;
     letter-spacing: 5px;
-    justify-content: center; 
+    justify-content: center;
 }
-.header-container>h1::first-letter { 
-    color:red;
+
+.header-container>h1::first-letter {
+    color: red;
     font-size: 30px;
 }
 
-.header-container>h2 { 
-    margin:0;
-    padding:5px;
+.header-container>h2 {
+    margin: 0;
+    padding: 5px;
     font-size: 15px;
     letter-spacing: 4px;
-    justify-content: center; 
+    justify-content: center;
 }
+
 .main-window {
-    width:100%;
-    display:flex;
-    flex-flow:row;
-    justify-content:center;
-    margin:1px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 1px;
 }
+
 .gameBoard {
-    margin:2px;
-    display:flex;
+    margin: 2px;
+    display: flex;
     flex-flow: column;
-    align-items: flex-start;    
+    align-items: flex-start;
     align-content: center;
-    width:70%;
-    height:450px;
+    width: 70%;
+    height: 450px;
 }
 
 .question {
     margin: 1px;
-    width:100%;
-    height:150px;
+    width: 100%;
+    height: 150px;
     text-align: center;
-    display:flex;
-    flex-flow:row;
+    display: flex;
+    flex-flow: row;
     align-items: center;
 }
+
 .active-question {
-    width:100%;
+    width: 100%;
     font-size: 30px;
     letter-spacing: 5px;
     font-weight: 10px;
     text-transform: capitalize;
- }
+}
+
 .answers {
-    margin:1px;
-    width:100%;
-    height:300px;
-    display:flex;
-    flex-flow:row;
+    margin: 1px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-flow: row;
     align-items: flex-start;
 }
-.active-choices {
-    width:150px;
-    height:280px;
-    font-size: 25px;
-    margin:3px;
-    
-}
-.active-choices:link {
-    width:150px;
-    height:280px;
-    font-size: 25px;
-    margin:3px;
-    filter: saturate(5)
-    
-    
-}
-.active-choices:visited {
-    width:150px;
-    height:280px;
-    font-size: 25px;
-    margin:3px;
-}
-.active-choices:hover {
-    width:180px;
-    height:300px;
-    font-size: 25px;
-    margin:3px;
-    filter: saturate(5)
 
+.active-choices {
+    width: 150px;
+    height: 280px;
+    font-size: 25px;
+    margin: 3px;
+}
+
+.active-choices:link {
+    width: 150px;
+    height: 280px;
+    font-size: 25px;
+    margin: 3px;
+    filter: saturate(5)
+}
+
+.active-choices:visited {
+    width: 150px;
+    height: 280px;
+    font-size: 25px;
+    margin: 3px;
+}
+
+.active-choices:hover {
+    width: 180px;
+    height: 300px;
+    font-size: 25px;
+    margin: 3px;
+    filter: saturate(5)
 }
 
 .active-choices:active {
-    width:180px;
-    height:300px;
+    width: 180px;
+    height: 300px;
     font-size: 25px;
-    margin:3px;
-    
+    margin: 3px;
 }
+
 .active-choices
 /* .active-choices>img {
     width:100%;
@@ -129,90 +137,103 @@ body {
 
 .players {
     margin-left: 5px;
-    width:25%;
-    height:450px;
+    width: 25%;
+    height: 450px;
 }
+
 .player-choice {
-    width:22%;
-    border-bottom:1px solid black;
+    width: 22%;
+    border-bottom: 1px solid black;
 }
+
 .footer-container {
-    display:flex;
-    width:100%;
+    display: flex;
+    width: 100%;
     flex-flow: row;
     justify-content: flex-end;
     align-items: baseline;
+}
 
-} 
 .footer-container>h1 {
     font-size: 20px;
-} 
+}
 
+/* AS: I would use classes instead of IDs for CSS, 
+especially since these are so similar */
 #start {
-    margin:5px;
-    width:120px;
-    height:35px;
+    margin: 5px;
+    width: 120px;
+    height: 35px;
     font-size: 20px;
     background: transparent;
     border: solid #1F2710 1px;
     text-align: center;
-    color: 	#1F2710;
+    color: #1F2710;
     border-radius: 400px;
+}
 
-}
 #players {
-    margin:5px;
-    width:160px;
-    height:30px;
+    margin: 5px;
+    width: 160px;
+    height: 30px;
     font-size: 20px;
     background: transparent;
     border: solid #1F2710 1px;
     text-align: center;
-    color: 	#1F2710;
+    color: #1F2710;
     border-radius: 400px;
 }
+
 #next {
-        margin:5px;
-        width:160px;
-        height:30px;
-        font-size: 20px;
-        background: transparent;
-        border: solid #1F2710 1px;
-        text-align: center;
-        color: 	#1F2710;
-        border-radius: 400px;
-}
-#rest {
-    margin:5px;
-    margin-left: 15px;
-    width:160px;
-    height:30px;
+    margin: 5px;
+    width: 160px;
+    height: 30px;
     font-size: 20px;
     background: transparent;
     border: solid #1F2710 1px;
     text-align: center;
-    color: 	#1F2710;
+    color: #1F2710;
     border-radius: 400px;
 }
+
+#rest {
+    margin: 5px;
+    margin-left: 15px;
+    width: 160px;
+    height: 30px;
+    font-size: 20px;
+    background: transparent;
+    border: solid #1F2710 1px;
+    text-align: center;
+    color: #1F2710;
+    border-radius: 400px;
+}
+
 .letter-one {
     margin: 2px;
-    font-size:40px;
+    font-size: 40px;
     animation: 3s infinite alternate blinker;
 }
+
 .letter-two {
     margin: 2px;
-    color:red;
-    font-size:25px;
+    color: red;
+    font-size: 25px;
     animation: 3s infinite alternate blinker;
 }
+
 .letter-three {
     margin: 2px;
-    color:gray;
-    font-size:25px;
+    color: gray;
+    font-size: 25px;
     animation: 3s infinite alternate blinker;
 }
+
 @keyframes blinker {
-    From { color:green} 
-to {color:rgb(32, 40, 139);
-}
+    From {
+        color: green
+    }
+    to {
+        color: rgb(32, 40, 139);
+    }
 }
